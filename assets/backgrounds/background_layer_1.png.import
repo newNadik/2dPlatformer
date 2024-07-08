@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crkwsbv7ktld0"
-path="res://.godot/imported/4_Cat_Fall-Sheet.png-3ffdac9d929577e1590eb27d58960e6b.ctex"
+uid="uid://blcldf0cifg0g"
+path="res://.godot/imported/background_layer_1.png-9336adb4d0154783d224cbde72f659c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/4_Cat_Fall-Sheet.png"
-dest_files=["res://.godot/imported/4_Cat_Fall-Sheet.png-3ffdac9d929577e1590eb27d58960e6b.ctex"]
+source_file="res://assets/backgrounds/background_layer_1.png"
+dest_files=["res://.godot/imported/background_layer_1.png-9336adb4d0154783d224cbde72f659c5.ctex"]
 
 [params]
 

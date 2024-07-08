@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btpx0kvg7rab8"
-path="res://.godot/imported/oak_woods_tileset.png-ef307a4b80b7b2c790d963774fd87030.ctex"
+uid="uid://cwxjamplnupi0"
+path="res://.godot/imported/3_Cat_Jump-Sheet.png-f4bcd4a480b5a59c9946668221c592c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/oak_woods_tileset.png"
-dest_files=["res://.godot/imported/oak_woods_tileset.png-ef307a4b80b7b2c790d963774fd87030.ctex"]
+source_file="res://assets/sprites/3_Cat_Jump-Sheet.png"
+dest_files=["res://.godot/imported/3_Cat_Jump-Sheet.png-f4bcd4a480b5a59c9946668221c592c3.ctex"]
 
 [params]
 
