@@ -1,21 +1,21 @@
 [gd_scene load_steps=19 format=3 uid="uid://c851kghhvaeb6"]
 
-[ext_resource type="Texture2D" uid="uid://blcldf0cifg0g" path="res://assets/backgrounds/background_layer_1.png" id="1_p76re"]
-[ext_resource type="Texture2D" uid="uid://sbbe70annyo4" path="res://assets/backgrounds/background_layer_2.png" id="2_8sfpw"]
-[ext_resource type="Texture2D" uid="uid://cmvo2cyg1h5yx" path="res://assets/backgrounds/background_layer_3.png" id="3_cbfx6"]
-[ext_resource type="Texture2D" uid="uid://btpx0kvg7rab8" path="res://assets/tiles/oak_woods_tileset.png" id="4_ff4by"]
-[ext_resource type="Texture2D" uid="uid://ntuc7expt2dv" path="res://assets/tiles/castle_tileset.png" id="5_u2din"]
-[ext_resource type="Texture2D" uid="uid://cy2gh7swob3i" path="res://assets/sprites/decorations/sign.png" id="6_vs0ma"]
-[ext_resource type="PackedScene" uid="uid://dwerp2xn2x2br" path="res://scenes/characters/character_body_2d.tscn" id="7_sf4as"]
-[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="8_ywuy8"]
-[ext_resource type="Script" path="res://scenes/Camera2D.gd" id="9_33ucl"]
-[ext_resource type="Texture2D" uid="uid://brch6x3tf31li" path="res://assets/sprites/decorations/grass_2.png" id="10_ggk17"]
-[ext_resource type="Texture2D" uid="uid://b5shdchwn2c6f" path="res://assets/sprites/decorations/grass_1.png" id="11_brqfu"]
-[ext_resource type="Texture2D" uid="uid://cgoi2vm7u3uln" path="res://assets/sprites/decorations/rock_3.png" id="12_p8ku6"]
-[ext_resource type="Texture2D" uid="uid://cj6qerhj0pj3j" path="res://assets/sprites/decorations/rock_2.png" id="13_tvede"]
+[ext_resource type="Texture2D" uid="uid://blcldf0cifg0g" path="res://assets/backgrounds/background_layer_1.png" id="1_sfpqx"]
+[ext_resource type="Texture2D" uid="uid://sbbe70annyo4" path="res://assets/backgrounds/background_layer_2.png" id="2_164df"]
+[ext_resource type="Texture2D" uid="uid://cmvo2cyg1h5yx" path="res://assets/backgrounds/background_layer_3.png" id="3_e7sq6"]
+[ext_resource type="Texture2D" uid="uid://btpx0kvg7rab8" path="res://assets/tiles/oak_woods_tileset.png" id="4_5bonl"]
+[ext_resource type="Texture2D" uid="uid://ntuc7expt2dv" path="res://assets/tiles/castle_tileset.png" id="5_ixy4w"]
+[ext_resource type="Texture2D" uid="uid://cy2gh7swob3i" path="res://assets/sprites/decorations/sign.png" id="6_nmaa4"]
+[ext_resource type="PackedScene" uid="uid://dwerp2xn2x2br" path="res://scenes/characters/character_body_2d.tscn" id="7_knudp"]
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="8_rrvti"]
+[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="9_xxgx4"]
+[ext_resource type="Texture2D" uid="uid://brch6x3tf31li" path="res://assets/sprites/decorations/grass_2.png" id="10_o4oai"]
+[ext_resource type="Texture2D" uid="uid://b5shdchwn2c6f" path="res://assets/sprites/decorations/grass_1.png" id="11_l5pwc"]
+[ext_resource type="Texture2D" uid="uid://cgoi2vm7u3uln" path="res://assets/sprites/decorations/rock_3.png" id="12_3rg14"]
+[ext_resource type="Texture2D" uid="uid://cj6qerhj0pj3j" path="res://assets/sprites/decorations/rock_2.png" id="13_ipfxs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qw0s"]
-texture = ExtResource("4_ff4by")
+texture = ExtResource("4_5bonl")
 texture_region_size = Vector2i(24, 24)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -593,7 +593,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4qw0s")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62mwc"]
-texture = ExtResource("5_u2din")
+texture = ExtResource("5_ixy4w")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1228,7 +1228,7 @@ custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 offset_right = 873.0
 offset_bottom = 180.0
 scale = Vector2(3.6, 3.6)
-texture = ExtResource("1_p76re")
+texture = ExtResource("1_sfpqx")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
@@ -1239,7 +1239,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_8sfpw")
+texture = ExtResource("2_164df")
 stretch_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="TextureRect"]
@@ -1250,7 +1250,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_cbfx6")
+texture = ExtResource("3_e7sq6")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1274,17 +1274,17 @@ position = Vector2(1790, 317)
 texture_filter = 1
 position = Vector2(-4, 54)
 scale = Vector2(4, 4)
-texture = ExtResource("6_vs0ma")
+texture = ExtResource("6_nmaa4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
 position = Vector2(-4, 2)
 shape = SubResource("RectangleShape2D_p7ekl")
 one_way_collision = true
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("7_sf4as")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_knudp")]
 texture_filter = 1
 position = Vector2(25, 467)
-script = ExtResource("8_ywuy8")
+script = ExtResource("8_rrvti")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
@@ -1292,7 +1292,7 @@ limit_top = 0
 limit_right = 3450
 limit_bottom = 648
 editor_draw_limits = true
-script = ExtResource("9_33ucl")
+script = ExtResource("9_xxgx4")
 
 [node name="decor" type="Node" parent="."]
 
@@ -1302,7 +1302,7 @@ offset_left = 998.0
 offset_top = 559.0
 offset_right = 1038.0
 offset_bottom = 599.0
-texture = ExtResource("10_ggk17")
+texture = ExtResource("10_o4oai")
 stretch_mode = 4
 
 [node name="TextureRect3" type="TextureRect" parent="decor"]
@@ -1311,7 +1311,7 @@ offset_left = 1617.0
 offset_top = 561.0
 offset_right = 1657.0
 offset_bottom = 601.0
-texture = ExtResource("11_brqfu")
+texture = ExtResource("11_l5pwc")
 stretch_mode = 4
 
 [node name="TextureRect4" type="TextureRect" parent="decor"]
@@ -1320,7 +1320,7 @@ offset_left = 2487.0
 offset_top = 561.0
 offset_right = 2527.0
 offset_bottom = 601.0
-texture = ExtResource("11_brqfu")
+texture = ExtResource("11_l5pwc")
 stretch_mode = 4
 
 [node name="TextureRect2" type="TextureRect" parent="decor"]
@@ -1329,7 +1329,7 @@ offset_left = 1507.0
 offset_top = 415.0
 offset_right = 1547.0
 offset_bottom = 455.0
-texture = ExtResource("10_ggk17")
+texture = ExtResource("10_o4oai")
 stretch_mode = 4
 
 [node name="TextureRect5" type="TextureRect" parent="decor"]
@@ -1338,7 +1338,7 @@ offset_left = 1412.0
 offset_top = 468.0
 offset_right = 1502.0
 offset_bottom = 508.0
-texture = ExtResource("12_p8ku6")
+texture = ExtResource("12_3rg14")
 stretch_mode = 4
 
 [node name="TextureRect6" type="TextureRect" parent="decor"]
@@ -1347,5 +1347,5 @@ offset_left = 405.0
 offset_top = 551.0
 offset_right = 467.0
 offset_bottom = 591.0
-texture = ExtResource("13_tvede")
+texture = ExtResource("13_ipfxs")
 stretch_mode = 4
