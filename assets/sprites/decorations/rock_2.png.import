@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crkwsbv7ktld0"
-path="res://.godot/imported/4_Cat_Fall-Sheet.png-a00693106cb1a8b6166328609bdcac4e.ctex"
+uid="uid://cj6qerhj0pj3j"
+path="res://.godot/imported/rock_2.png-155641472e2aadcb54f4a1b43ebc7fd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/4_Cat_Fall-Sheet.png"
-dest_files=["res://.godot/imported/4_Cat_Fall-Sheet.png-a00693106cb1a8b6166328609bdcac4e.ctex"]
+source_file="res://assets/sprites/decorations/rock_2.png"
+dest_files=["res://.godot/imported/rock_2.png-155641472e2aadcb54f4a1b43ebc7fd4.ctex"]
 
 [params]
 

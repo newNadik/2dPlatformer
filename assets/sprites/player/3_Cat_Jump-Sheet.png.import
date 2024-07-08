@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chuxayiik0lji"
-path="res://.godot/imported/2_Cat_Run-Sheet.png-c5abb7d732a78952e5a356233766954d.ctex"
+uid="uid://cwxjamplnupi0"
+path="res://.godot/imported/3_Cat_Jump-Sheet.png-11b3e8eef3ec3a310c90c28954f1fbab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/2_Cat_Run-Sheet.png"
-dest_files=["res://.godot/imported/2_Cat_Run-Sheet.png-c5abb7d732a78952e5a356233766954d.ctex"]
+source_file="res://assets/sprites/player/3_Cat_Jump-Sheet.png"
+dest_files=["res://.godot/imported/3_Cat_Jump-Sheet.png-11b3e8eef3ec3a310c90c28954f1fbab.ctex"]
 
 [params]
 

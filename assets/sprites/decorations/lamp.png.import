@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwxjamplnupi0"
-path="res://.godot/imported/3_Cat_Jump-Sheet.png-f4bcd4a480b5a59c9946668221c592c3.ctex"
+uid="uid://brcba2y11dkdc"
+path="res://.godot/imported/lamp.png-18373b34614937bc284406bb78c6a6a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/3_Cat_Jump-Sheet.png"
-dest_files=["res://.godot/imported/3_Cat_Jump-Sheet.png-f4bcd4a480b5a59c9946668221c592c3.ctex"]
+source_file="res://assets/sprites/decorations/lamp.png"
+dest_files=["res://.godot/imported/lamp.png-18373b34614937bc284406bb78c6a6a4.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c851kghhvaeb6"]
+[gd_scene load_steps=16 format=3 uid="uid://c851kghhvaeb6"]
 
 [ext_resource type="Texture2D" uid="uid://blcldf0cifg0g" path="res://assets/backgrounds/background_layer_1.png" id="1_khynb"]
 [ext_resource type="Texture2D" uid="uid://sbbe70annyo4" path="res://assets/backgrounds/background_layer_2.png" id="2_6vhoh"]
@@ -6,7 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cmvo2cyg1h5yx" path="res://assets/backgrounds/background_layer_3.png" id="3_c1246"]
 [ext_resource type="PackedScene" uid="uid://dwerp2xn2x2br" path="res://scenes/characters/character_body_2d.tscn" id="4_y21nr"]
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="5_7urjr"]
+[ext_resource type="Texture2D" uid="uid://brch6x3tf31li" path="res://assets/sprites/decorations/grass_2.png" id="5_skbdg"]
+[ext_resource type="Texture2D" uid="uid://b5shdchwn2c6f" path="res://assets/sprites/decorations/grass_1.png" id="6_bswh7"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="7_5nybx"]
+[ext_resource type="Texture2D" uid="uid://cy2gh7swob3i" path="res://assets/sprites/decorations/sign.png" id="7_t6j5t"]
+[ext_resource type="Texture2D" uid="uid://cgoi2vm7u3uln" path="res://assets/sprites/decorations/rock_3.png" id="8_43fno"]
+[ext_resource type="Texture2D" uid="uid://cj6qerhj0pj3j" path="res://assets/sprites/decorations/rock_2.png" id="9_2aai2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qw0s"]
 texture = ExtResource("3_3mqxv")
@@ -588,6 +593,9 @@ tile_size = Vector2i(24, 24)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4qw0s")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7ekl"]
+size = Vector2(84, 15.5)
+
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -628,9 +636,23 @@ tile_set = SubResource("TileSet_kq0ff")
 format = 2
 layer_0/tile_data = PackedInt32Array(524288, 0, 0, 524289, 131072, 0, 524290, 65536, 0, 524291, 131072, 0, 524292, 65536, 0, 524293, 131072, 0, 524294, 851968, 6, 524295, 393216, 0, 524296, 393216, 0, 524297, 458752, 0, 524298, 393216, 0, 524299, 458752, 0, 524300, 393216, 0, 524301, 786432, 6, 524302, 851968, 6, 524303, 393216, 0, 524304, 458752, 0, 524305, 393216, 0, 524306, 458752, 0, 524307, 393216, 0, 524308, 458752, 0, 524309, 786432, 6, 524310, 65536, 0, 524311, 327680, 13, 524312, 393216, 13, 524313, 131072, 0, 524314, 131072, 0, 524315, 851968, 6, 524316, 458752, 0, 524317, 786432, 6, 524318, 131072, 0, 524319, 131072, 0, 524320, 131072, 0, 524321, 131072, 0, 524322, 131072, 0, 524323, 131072, 0, 524324, 131072, 0, 524325, 131072, 0, 524326, 131072, 0, 524327, 131072, 0, 524328, 131072, 0, 524329, 131072, 0, 524330, 131072, 0, 524331, 131072, 0, 524332, 131072, 0, 524333, 131072, 0, 524334, 131072, 0, 524335, 131072, 0, 524336, 131072, 0, 589824, 0, 1, 589825, 65536, 1, 589826, 65536, 1, 589827, 65536, 1, 589828, 65536, 1, 589829, 65536, 1, 589830, 65536, 1, 589831, 65536, 1, 589832, 65536, 1, 589833, 65536, 1, 589834, 65536, 1, 589835, 65536, 1, 589836, 65536, 1, 589837, 65536, 1, 589838, 65536, 1, 589839, 65536, 1, 589840, 65536, 1, 589841, 65536, 1, 589842, 65536, 1, 589843, 65536, 1, 589844, 65536, 1, 589845, 65536, 1, 589846, 65536, 1, 589847, 65536, 1, 589848, 65536, 1, 589849, 65536, 1, 589850, 65536, 1, 589851, 65536, 1, 589852, 65536, 1, 589853, 65536, 1, 589854, 65536, 1, 589855, 65536, 1, 589856, 65536, 1, 589857, 65536, 1, 589858, 65536, 1, 589859, 65536, 1, 589860, 65536, 1, 589861, 65536, 1, 589862, 65536, 1, 589863, 65536, 1, 589864, 65536, 1, 589865, 65536, 1, 589866, 65536, 1, 589867, 65536, 1, 589868, 65536, 1, 589869, 65536, 1, 589870, 65536, 1, 589871, 65536, 1, 589872, 65536, 1, 655359, 196608, 1, 589823, 196608, 1, 524287, 196608, 1, 458751, 196608, 1, 393215, 196608, 1, 327679, 196608, 1, 262143, 196608, 1, 196607, 196608, 1, 131071, 196608, 1, 65535, 196608, 1, -1, 196608, 1, 458770, 327680, 0, 458771, 393216, 0, 458772, 458752, 0, 458773, 131072, 13, 458775, 65536, 1, 458774, 65536, 1, 458780, 524288, 0, 458779, 458752, 0, 458778, 196608, 13, 458776, 65536, 1, 458777, 65536, 1, 393236, 327680, 3, 393243, 458752, 3, 393237, 851968, 6, 393238, 393216, 0, 393239, 393216, 0, 393240, 393216, 0, 393241, 393216, 0, 393242, 786432, 6)
 
+[node name="Node2D" type="StaticBody2D" parent="."]
+position = Vector2(1790, 317)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(-4, 54)
+scale = Vector2(4, 4)
+texture = ExtResource("7_t6j5t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
+position = Vector2(-4, 2)
+shape = SubResource("RectangleShape2D_p7ekl")
+one_way_collision = true
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_y21nr")]
 texture_filter = 1
-position = Vector2(24, 452)
+position = Vector2(1459, 323)
 script = ExtResource("5_7urjr")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -640,3 +662,59 @@ limit_right = 3450
 limit_bottom = 648
 editor_draw_limits = true
 script = ExtResource("7_5nybx")
+
+[node name="decor" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="decor"]
+texture_filter = 1
+offset_left = 998.0
+offset_top = 559.0
+offset_right = 1038.0
+offset_bottom = 599.0
+texture = ExtResource("5_skbdg")
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="decor"]
+texture_filter = 1
+offset_left = 1617.0
+offset_top = 561.0
+offset_right = 1657.0
+offset_bottom = 601.0
+texture = ExtResource("6_bswh7")
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="decor"]
+texture_filter = 1
+offset_left = 2487.0
+offset_top = 561.0
+offset_right = 2527.0
+offset_bottom = 601.0
+texture = ExtResource("6_bswh7")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="decor"]
+texture_filter = 1
+offset_left = 1507.0
+offset_top = 415.0
+offset_right = 1547.0
+offset_bottom = 455.0
+texture = ExtResource("5_skbdg")
+stretch_mode = 4
+
+[node name="TextureRect5" type="TextureRect" parent="decor"]
+texture_filter = 1
+offset_left = 1412.0
+offset_top = 468.0
+offset_right = 1502.0
+offset_bottom = 508.0
+texture = ExtResource("8_43fno")
+stretch_mode = 4
+
+[node name="TextureRect6" type="TextureRect" parent="decor"]
+texture_filter = 1
+offset_left = 405.0
+offset_top = 551.0
+offset_right = 467.0
+offset_bottom = 591.0
+texture = ExtResource("9_2aai2")
+stretch_mode = 4
