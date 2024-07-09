@@ -1,6 +1,6 @@
 extends Camera2D
 
-@onready var background_rect = $"../../TextureRect"
+@onready var background_rect = $"../../Background"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,12 +14,3 @@ func set_limits():
 		limit_right = map_rect.position.x + map_rect.size.x
 		limit_top = map_rect.position.y
 		limit_bottom = map_rect.position.y + map_rect.size.y
-
-		# Adjust the limits based on the screen size
-		#var screen_size = get_viewport().size
-		#limit_right -= screen_size.x
-		#limit_bottom -= screen_size.y
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

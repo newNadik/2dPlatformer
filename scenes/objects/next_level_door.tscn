@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvfs0lyrlwxba"]
+
+[ext_resource type="Script" path="res://scripts/next_level_door.gd" id="1_wc2g1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl3q0"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_wc2g1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jl3q0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

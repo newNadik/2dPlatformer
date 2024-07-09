@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c851kghhvaeb6"]
+[gd_scene load_steps=20 format=3 uid="uid://c851kghhvaeb6"]
 
 [ext_resource type="Texture2D" uid="uid://blcldf0cifg0g" path="res://assets/backgrounds/background_layer_1.png" id="1_sfpqx"]
 [ext_resource type="Texture2D" uid="uid://sbbe70annyo4" path="res://assets/backgrounds/background_layer_2.png" id="2_164df"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cy2gh7swob3i" path="res://assets/sprites/decorations/sign.png" id="6_nmaa4"]
 [ext_resource type="PackedScene" uid="uid://dwerp2xn2x2br" path="res://scenes/characters/character_body_2d.tscn" id="7_knudp"]
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="8_rrvti"]
-[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="9_xxgx4"]
+[ext_resource type="Script" path="res://scripts/camera_2D.gd" id="9_xxgx4"]
+[ext_resource type="PackedScene" uid="uid://bvfs0lyrlwxba" path="res://scenes/objects/next_level_door.tscn" id="10_cmux1"]
 [ext_resource type="Texture2D" uid="uid://brch6x3tf31li" path="res://assets/sprites/decorations/grass_2.png" id="10_o4oai"]
 [ext_resource type="Texture2D" uid="uid://b5shdchwn2c6f" path="res://assets/sprites/decorations/grass_1.png" id="11_l5pwc"]
 [ext_resource type="Texture2D" uid="uid://cgoi2vm7u3uln" path="res://assets/sprites/decorations/rock_3.png" id="12_3rg14"]
@@ -1222,7 +1223,7 @@ size = Vector2(84, 15.5)
 
 [node name="Node" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 texture_filter = 1
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 offset_right = 873.0
@@ -1231,7 +1232,7 @@ scale = Vector2(3.6, 3.6)
 texture = ExtResource("1_sfpqx")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+[node name="Background2" type="TextureRect" parent="Background"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -1242,7 +1243,7 @@ grow_vertical = 2
 texture = ExtResource("2_164df")
 stretch_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+[node name="Background3" type="TextureRect" parent="Background"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -1253,40 +1254,46 @@ grow_vertical = 2
 texture = ExtResource("3_e7sq6")
 stretch_mode = 1
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="ForestTileMap" type="TileMap" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_kq0ff")
 format = 2
 layer_0/tile_data = PackedInt32Array(524288, 0, 0, 524289, 131072, 0, 524290, 65536, 0, 524291, 131072, 0, 524292, 65536, 0, 524293, 131072, 0, 524294, 851968, 6, 524295, 393216, 0, 524296, 393216, 0, 524297, 458752, 0, 524298, 393216, 0, 524299, 458752, 0, 524300, 393216, 0, 524301, 786432, 6, 524302, 851968, 6, 524303, 393216, 0, 524304, 458752, 0, 524305, 393216, 0, 524306, 458752, 0, 524307, 393216, 0, 524308, 458752, 0, 524309, 786432, 6, 524310, 65536, 0, 524311, 327680, 13, 524312, 393216, 13, 524313, 131072, 0, 524314, 131072, 0, 524315, 851968, 6, 524316, 458752, 0, 524317, 786432, 6, 524318, 131072, 0, 524319, 131072, 0, 524320, 131072, 0, 524321, 131072, 0, 524322, 131072, 0, 524323, 131072, 0, 524324, 131072, 0, 524325, 131072, 0, 524326, 131072, 0, 524327, 131072, 0, 524328, 131072, 0, 524329, 327680, 13, 589824, 0, 1, 589825, 65536, 1, 589826, 65536, 1, 589827, 65536, 1, 589828, 65536, 1, 589829, 65536, 1, 589830, 65536, 1, 589831, 65536, 1, 589832, 65536, 1, 589833, 65536, 1, 589834, 65536, 1, 589835, 65536, 1, 589836, 65536, 1, 589837, 65536, 1, 589838, 65536, 1, 589839, 65536, 1, 589840, 65536, 1, 589841, 65536, 1, 589842, 65536, 1, 589843, 65536, 1, 589844, 65536, 1, 589845, 65536, 1, 589846, 65536, 1, 589847, 65536, 1, 589848, 65536, 1, 589849, 65536, 1, 589850, 65536, 1, 589851, 65536, 1, 589852, 65536, 1, 589853, 65536, 1, 589854, 65536, 1, 589855, 65536, 1, 589856, 65536, 1, 589857, 65536, 1, 589858, 65536, 1, 589859, 65536, 1, 589860, 65536, 1, 589861, 65536, 1, 589862, 65536, 1, 589863, 65536, 1, 589864, 196608, 12, 589865, 131072, 12, 589866, 196608, 13, 655359, 196608, 1, 589823, 196608, 1, 524287, 196608, 1, 458751, 196608, 1, 393215, 196608, 1, 327679, 196608, 1, 262143, 196608, 1, 196607, 196608, 1, 131071, 196608, 1, 65535, 196608, 1, -1, 196608, 1, 458770, 327680, 0, 458771, 393216, 0, 458772, 458752, 0, 458773, 131072, 13, 458775, 65536, 1, 458774, 65536, 1, 458780, 524288, 0, 458779, 458752, 0, 458778, 196608, 13, 458776, 65536, 1, 458777, 65536, 1, 393236, 327680, 3, 393243, 458752, 3, 393237, 851968, 6, 393238, 393216, 0, 393239, 393216, 0, 393240, 393216, 0, 393241, 393216, 0, 393242, 786432, 6, 524330, 196608, 12, 524331, 131072, 12, 589867, 131072, 13, 458794, 65536, 1, 458792, 65536, 12, 458793, 131072, 12, 393257, 65536, 5, 393258, 131072, 5, 393259, 131072, 0, 458795, 196608, 1)
 
-[node name="TileMap2" type="TileMap" parent="."]
+[node name="CastleTileMap" type="TileMap" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_oixie")
 format = 2
 layer_0/tile_data = PackedInt32Array(60, 65536, 2, 65596, 65536, 3, 65598, 720896, 8, 65600, 917504, 8, 65601, 917504, 8, 62, 786432, 6, 63, 851968, 7, 64, 917504, 8, 65, 917504, 8, 65599, 851968, 7, 131134, 196608, 4, 131135, 196608, 4, 196671, 0, 3, 262207, 0, 3, 327743, 0, 3, 393279, 0, 3, 458815, 0, 3, 720955, 131072, 0, 720956, 131072, 1, 589887, 196608, 0, 524351, 0, 3, 131136, 131072, 3, 131137, 720896, 7, 196673, 851968, 9, 262209, 786432, 8, 196672, 196608, 5, 262208, 720896, 8, 327744, 0, 6, 393280, 0, 6, 458816, 0, 6, 524352, 655360, 9, 589888, 196608, 0, 589889, 196608, 0, 524353, 0, 6, 458817, 65536, 4, 393281, 0, 6, 327745, 720896, 8, 66, 65536, 2, 65602, 65536, 2, 131138, 65536, 2, 196674, 65536, 2, 262210, 65536, 2, 327746, 65536, 2, 393282, 65536, 2, 458818, 65536, 2, 524354, 65536, 2, 589890, 65536, 2, 655426, 65536, 2, 720962, 65536, 2, 786498, 65536, 2, 655420, 131072, 0, 655421, 131072, 1, 589885, 131072, 0, 589886, 196608, 0, 720957, 655360, 7, 655422, 655360, 7, 655425, 524288, 7, 655424, 458752, 7, 720961, 393216, 2, 786497, 393216, 2, 852033, 393216, 2, 917569, 393216, 2, 131133, 131072, 4, 196670, 458752, 7, 65597, 131072, 3, 61, 720896, 8)
 
-[node name="Node2D" type="StaticBody2D" parent="."]
+[node name="Sign" type="StaticBody2D" parent="."]
 position = Vector2(1790, 317)
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Sign"]
 texture_filter = 1
 position = Vector2(-4, 54)
 scale = Vector2(4, 4)
 texture = ExtResource("6_nmaa4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
 position = Vector2(-4, 2)
 shape = SubResource("RectangleShape2D_p7ekl")
 one_way_collision = true
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("7_knudp")]
+[node name="NextLevel" parent="." groups=["Doors"] instance=ExtResource("10_cmux1")]
+position = Vector2(3156, 231)
+scale = Vector2(1, 20)
+target_scene_path = "res://scenes/levels/level2.tscn"
+door_direction = -1
+
+[node name="Player" parent="." instance=ExtResource("7_knudp")]
 texture_filter = 1
-position = Vector2(25, 467)
+position = Vector2(1643, 312)
 script = ExtResource("8_rrvti")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 0
 limit_top = 0
 limit_right = 3450

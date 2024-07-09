@@ -12,7 +12,19 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Initialization
 func _ready():
-	pass  # Any initialization code can go here
+	if Global.target_door_id != 0:
+		var target_door = find_door_by_id(Global.target_door_id)
+		if target_door:
+			target_door.pause_door(0.2)
+			position.x = target_door.position.x + target_door.get("door_direction") * 10
+		Global.set_target_door_id(0)
+
+func find_door_by_id(door_id: int) -> Node2D:
+	var nodes = get_tree().get_nodes_in_group("Doors")
+	for node in nodes:
+		if node.get("door_id") == door_id:
+			return node
+	return null
 
 # Physics and Input Handling
 func _physics_process(delta):
@@ -55,6 +67,4 @@ func handle_animation(velocity: Vector2):
 
 # Utility Functions
 func get_gravity(velocity: Vector2) -> float:
-	if velocity.y < 0:
-		return gravity
-	return gravity * 1.5
+	return gravity if velocity.y < 0 else gravity * 1.5
