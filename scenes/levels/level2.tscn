@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://clvkl1ce3gcl3"]
+[gd_scene load_steps=14 format=3 uid="uid://clvkl1ce3gcl3"]
 
 [ext_resource type="Texture2D" uid="uid://blcldf0cifg0g" path="res://assets/backgrounds/background_layer_1.png" id="1_5bbhw"]
 [ext_resource type="Texture2D" uid="uid://ntuc7expt2dv" path="res://assets/tiles/castle_tileset.png" id="5_62eya"]
 [ext_resource type="PackedScene" uid="uid://bvfs0lyrlwxba" path="res://scenes/objects/next_level_door.tscn" id="6_24yw8"]
 [ext_resource type="PackedScene" uid="uid://dwerp2xn2x2br" path="res://scenes/characters/character_body_2d.tscn" id="7_g5aha"]
 [ext_resource type="PackedScene" uid="uid://b3qisyjqtt0ap" path="res://scenes/objects/moving_platform.tscn" id="7_o7x68"]
+[ext_resource type="PackedScene" uid="uid://clp1vig5e3vnp" path="res://scenes/objects/death_zone.tscn" id="8_ejnjn"]
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="8_iad7c"]
 [ext_resource type="Script" path="res://scripts/camera_2D.gd" id="9_i4mfl"]
 
@@ -698,8 +699,12 @@ curve = SubResource("Curve2D_oy0g4")
 position = Vector2(652, 500)
 curve = SubResource("Curve2D_wkfa0")
 
-[node name="Path2D" parent="." instance=ExtResource("7_o7x68")]
+[node name="Platfrom3" parent="." instance=ExtResource("7_o7x68")]
 position = Vector2(1025, 664)
 curve = SubResource("Curve2D_iqy2v")
 loop = false
 speed = 8.0
+
+[node name="DeathZone" parent="." instance=ExtResource("8_ejnjn")]
+position = Vector2(663, 635)
+scale = Vector2(4, 1)
