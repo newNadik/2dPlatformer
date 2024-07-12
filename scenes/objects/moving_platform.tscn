@@ -1,13 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3qisyjqtt0ap"]
+[gd_scene load_steps=7 format=3 uid="uid://b3qisyjqtt0ap"]
 
 [ext_resource type="Script" path="res://scripts/moving_platform.gd" id="1_cy0yd"]
 [ext_resource type="Texture2D" uid="uid://ntuc7expt2dv" path="res://assets/tiles/castle_tileset.png" id="2_wmp53"]
-
-[sub_resource type="Curve2D" id="Curve2D_p61fu"]
-_data = {
-"points": PackedVector2Array(2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 0, 0, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 300, 2.08165e-12)
-}
-point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1nt2"]
 size = Vector2(144, 45)
@@ -51,12 +45,12 @@ _data = {
 }
 
 [node name="Path2D" type="Path2D"]
-curve = SubResource("Curve2D_p61fu")
+position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("1_cy0yd")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(300, 2.08165e-12)
 progress = 300.0
+rotates = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
 remote_path = NodePath("../../AnimatableBody2D")
@@ -66,7 +60,6 @@ wait_time = 0.2
 one_shot = true
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
-position = Vector2(300, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
 texture_filter = 1
@@ -76,7 +69,6 @@ region_enabled = true
 region_rect = Rect2(64, 192, 48, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-position = Vector2(-3.38813e-21, -1.5)
 shape = SubResource("RectangleShape2D_x1nt2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
