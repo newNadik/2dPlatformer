@@ -1,9 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://dwerp2xn2x2br"]
+[gd_scene load_steps=35 format=3 uid="uid://dwerp2xn2x2br"]
 
 [ext_resource type="Texture2D" uid="uid://bc8xq5p6j7gab" path="res://assets/sprites/player/1_Cat_Idle-Sheet.png" id="1_y7e6u"]
 [ext_resource type="Texture2D" uid="uid://crkwsbv7ktld0" path="res://assets/sprites/player/4_Cat_Fall-Sheet.png" id="2_f1tkr"]
 [ext_resource type="Texture2D" uid="uid://cwxjamplnupi0" path="res://assets/sprites/player/3_Cat_Jump-Sheet.png" id="2_s6qrp"]
 [ext_resource type="Texture2D" uid="uid://chuxayiik0lji" path="res://assets/sprites/player/2_Cat_Run-Sheet.png" id="3_40528"]
+[ext_resource type="Script" path="res://scripts/camera_holder.gd" id="5_1qmlk"]
+[ext_resource type="Script" path="res://scripts/camera_2D.gd" id="6_yjy4j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5dgqk"]
 atlas = ExtResource("1_y7e6u")
@@ -225,3 +227,10 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(46, 59)
 shape = SubResource("RectangleShape2D_23rdq")
+
+[node name="CameraHolder" type="Node2D" parent="."]
+script = ExtResource("5_1qmlk")
+
+[node name="Camera2D" type="Camera2D" parent="CameraHolder"]
+position_smoothing_enabled = true
+script = ExtResource("6_yjy4j")

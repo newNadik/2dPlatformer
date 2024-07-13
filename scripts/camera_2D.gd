@@ -1,6 +1,6 @@
 extends Camera2D
 
-@onready var background_rect = $"../../Background"
+@onready var background_rect = $"../../../Background"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
