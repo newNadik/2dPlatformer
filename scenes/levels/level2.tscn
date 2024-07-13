@@ -705,6 +705,10 @@ curve = SubResource("Curve2D_iqy2v")
 loop = false
 speed = 8.0
 
-[node name="DeathZone" parent="." instance=ExtResource("8_ejnjn")]
+[node name="DeathZone" parent="." node_paths=PackedStringArray("respawn") instance=ExtResource("8_ejnjn")]
 position = Vector2(663, 635)
 scale = Vector2(4, 1)
+respawn = NodePath("Respawn")
+
+[node name="Respawn" type="Node2D" parent="DeathZone"]
+position = Vector2(-159.25, -301)
